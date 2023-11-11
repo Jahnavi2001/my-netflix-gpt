@@ -10,6 +10,13 @@
 - useRef Hook 
     (To get Email and Password entered values)
     (Here we can use useState hook instead of useRef hook also)
+- Firebase Setup
+- Deploying our app to production
+- Create SignUp User Account
+- Implement SignIn User API
+- Created Redux Store with userSlice
+- Implemented Signout Feature
+- Update Profile
 
 # Features
 
