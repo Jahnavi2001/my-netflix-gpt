@@ -2,6 +2,14 @@
 
 - Create React App
 - Configured TailwindCSS
+- Header
+- Routing of App
+- Login Form
+- SignUp Form
+- Form Validation
+- useRef Hook 
+    (To get Email and Password entered values)
+    (Here we can use useState hook instead of useRef hook also)
 
 # Features
 
