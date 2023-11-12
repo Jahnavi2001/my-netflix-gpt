@@ -8,14 +8,13 @@ import {
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useDispatch } from 'react-redux'
-import { useNavigate } from "react-router-dom";
 import { addUser } from "../utils/userSlice";
+import { LOGIN_BACKGROUND_LOGO, USER_AVATAR } from "../utils/constants";
 
 const Login = () => {
-  const [isSignInForm, setIsSignInForm] = useState(false);
+  const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
 
-  const navigate = useNavigate();
   const dispatch = useDispatch()
 
   const name = useRef(null)
@@ -38,15 +37,13 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log("🚀 SignUp> .then > user:", user, name);
           updateProfile(auth.currentUser, {
             displayName: name.current.value,
-            photoURL: "https://occ-0-2611-3662.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABY20DrC9-11ewwAs6nfEgb1vrORxRPP9IGmlW1WtKuaLIz8VxCx5NryzDK3_ez064IsBGdXjVUT59G5IRuFdqZlCJCneepU.png?r=229",
+            photoURL: USER_AVATAR,
           })
             .then(() => {
               const {uid, email, displayName, photoURL} = auth.currentUser
               dispatch(addUser({uid, email, displayName, photoURL}))
-              navigate("/browse");
             })
             .catch((error) => {
               const errorCode = error.code;
@@ -68,8 +65,6 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log("🚀SignIn > .then > user:", user);
-          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -88,7 +83,7 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/77d35039-751f-4c3e-9c8d-1240c1ca6188/cf244808-d722-428f-80a9-052acdf158ec/IN-en-20231106-popsignuptwoweeks-perspective_alpha_website_large.jpg"
+          src={LOGIN_BACKGROUND_LOGO}
           alt="logo"
         />
       </div>
