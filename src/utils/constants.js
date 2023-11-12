@@ -8,17 +8,24 @@ export const USER_AVATAR =
   "https://occ-0-2611-3662.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABY20DrC9-11ewwAs6nfEgb1vrORxRPP9IGmlW1WtKuaLIz8VxCx5NryzDK3_ez064IsBGdXjVUT59G5IRuFdqZlCJCneepU.png?r=229";
 
 export const API_OPTIONS = {
-  method: 'GET',
+  method: "GET",
   headers: {
-    accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4MzZiYmZjYTVlY2M4NTg2NWM2YTBkYzE3MTY3ODBhOCIsInN1YiI6IjY1NTA5Nzg3NjdiNjEzNDVjZDMyMDFiMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.yYkX-0hPu89ImlfT3s237-np2uPF3NspYLqCpQ4SB-E'
-  }
+    accept: "application/json",
+    Authorization:
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4MzZiYmZjYTVlY2M4NTg2NWM2YTBkYzE3MTY3ODBhOCIsInN1YiI6IjY1NTA5Nzg3NjdiNjEzNDVjZDMyMDFiMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.yYkX-0hPu89ImlfT3s237-np2uPF3NspYLqCpQ4SB-E",
+  },
 };
 
-export const NOW_PLAYING_MOVIES_API = "https://api.themoviedb.org/3/movie/now_playing?page=1"
+export const IMG_CDN = "https://image.tmdb.org/t/p/w780";
 
-export const POPULAR_MOVIES_API = 'https://api.themoviedb.org/3/movie/popular?page=1'
+export const NOW_PLAYING_MOVIES_API =
+  "https://api.themoviedb.org/3/movie/now_playing?page=1";
 
-export const TOP_RATED_MOVIES = 'https://api.themoviedb.org/3/movie/top_rated?page=1'
+export const POPULAR_MOVIES_API =
+  "https://api.themoviedb.org/3/movie/popular?page=1";
 
-export const UPCOMING_MOVIES = 'https://api.themoviedb.org/3/movie/upcoming?page=1'
+export const TOP_RATED_MOVIES =
+  "https://api.themoviedb.org/3/movie/top_rated?page=1";
+
+export const UPCOMING_MOVIES =
+  "https://api.themoviedb.org/3/movie/upcoming?page=1";
