@@ -29,3 +29,18 @@ export const TOP_RATED_MOVIES =
 
 export const UPCOMING_MOVIES =
   "https://api.themoviedb.org/3/movie/upcoming?page=1";
+
+export const SUPPORTED_LANGUAGES = [
+  {
+    name: 'English',
+    identifier: 'en'
+  },
+  {
+    name: 'Hindi',
+    identifier: 'hindi'
+  },
+  {
+    name: 'Spanish',
+    identifier: 'spanish'
+  }
+]
