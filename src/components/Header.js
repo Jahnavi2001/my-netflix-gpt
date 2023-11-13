@@ -50,7 +50,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="absolute py-2 px-8 bg-gradient-to-b from-black w-full z-10 flex justify-between items-center">
+    <div className="absolute py-2 px-8 bg-gradient-to-b from-black w-full z-10 flex flex-col justify-between items-center md:flex-row">
       <img className="w-48" src={NETFLIX_LOGO} alt="logo" />
 
       <div>
@@ -79,7 +79,8 @@ const Header = () => {
               onClick={handleSignOut}
             >
               <img className="w-6 h-6" src={user.photoURL} alt="profileLogo" />
-              {user.displayName} - SignOut
+              <span className="hidden md:block">{user.displayName} -</span>
+              SignOut
             </button>
           </div>
         )}
