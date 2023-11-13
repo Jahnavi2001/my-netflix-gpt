@@ -13,7 +13,7 @@ const Header = () => {
   const dispatch = useDispatch();
 
   const user = useSelector((store) => store.user);
-  const showGptSearch = useSelector((store) => store.gpt.showGptSearch)
+  const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
 
   const handleSignOut = () => {
     signOut(auth)
@@ -28,8 +28,8 @@ const Header = () => {
   };
 
   const handleLanguageClick = (e) => {
-    dispatch(changeLanguage(e.target.value))
-  }
+    dispatch(changeLanguage(e.target.value));
+  };
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -56,19 +56,23 @@ const Header = () => {
       <div>
         {user && (
           <div className="flex gap-4">
-            <select
-              className="p-2 rounded-md bg-gray-900 text-white"
-              onChange={handleLanguageClick}
-            >
-              {SUPPORTED_LANGUAGES.map((lang) => (
-                <option value={lang.identifier}>{lang.name}</option>
-              ))}
-            </select>
+            {showGptSearch && (
+              <select
+                className="p-2 rounded-md bg-gray-900 text-white"
+                onChange={handleLanguageClick}
+              >
+                {SUPPORTED_LANGUAGES.map((lang) => (
+                  <option key={lang.identifier} value={lang.identifier}>
+                    {lang.name}
+                  </option>
+                ))}
+              </select>
+            )}
             <button
               className="bg-purple-600 rounded-md px-4 py-2 text-white"
               onClick={handleGptSearchClick}
             >
-              { showGptSearch ? 'Home Page' : 'Gpt Search'}
+              {showGptSearch ? "Home Page" : "Gpt Search"}
             </button>
             <button
               className="bg-white p-2 rounded-md text-black flex items-center gap-2"

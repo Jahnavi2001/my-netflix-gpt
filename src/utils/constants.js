@@ -32,15 +32,17 @@ export const UPCOMING_MOVIES =
 
 export const SUPPORTED_LANGUAGES = [
   {
-    name: 'English',
-    identifier: 'en'
+    name: "English",
+    identifier: "en",
   },
   {
-    name: 'Hindi',
-    identifier: 'hindi'
+    name: "Hindi",
+    identifier: "hindi",
   },
   {
-    name: 'Spanish',
-    identifier: 'spanish'
-  }
-]
+    name: "Spanish",
+    identifier: "spanish",
+  },
+];
+
+export const OPENAI_API_KEY = "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";
